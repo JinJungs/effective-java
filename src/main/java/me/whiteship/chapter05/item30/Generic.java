@@ -1,4 +1,4 @@
-package me.whiteship.chapter05;
+package me.whiteship.chapter05.item30;
 
 import java.util.HashSet;
 import java.util.Set;
