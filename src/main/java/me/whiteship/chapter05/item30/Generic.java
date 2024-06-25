@@ -16,6 +16,12 @@ public class Generic {
         // 제너릭
         Set<String> aflCioGeneric = unionGeneric(guys, stooges);
         System.out.println(aflCioGeneric);
+
+        // 와일드카드
+        Set<Integer> integers = Set.of(1, 3, 5);
+        Set<Double> doubles = Set.of(2.0, 4.0, 6.0);
+        Set<Number> numbers = unionWildcard(integers, doubles);
+        System.out.println(numbers);
     }
 
     // 로타입 메서드
@@ -31,4 +37,12 @@ public class Generic {
         result.addAll(s2);
         return result;
     }
+
+    // 아이템 31. 와일드카드
+     public static <E> Set<E> unionWildcard(Set<? extends E> s1, Set<? extends E> s2) {
+        Set<E> result = new HashSet<>(s1);
+        result.addAll(s2);
+        return result;
+     }
+
 }
